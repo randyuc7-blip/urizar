@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# Local editor settings
+.vscode/
+.idea/
+
+# Logs and debug output
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local environment files
+.env
+.env.*
+
+# Dependency and build folders, if this static site ever gains tooling
+node_modules/
+dist/
+build/
+
+# Netlify local state
+.netlify/

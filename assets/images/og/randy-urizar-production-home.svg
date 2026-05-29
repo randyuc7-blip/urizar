@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="ogTitle ogDesc">
+  <title id="ogTitle">Randy Urizar Production social preview</title>
+  <desc id="ogDesc">Social preview image for growth systems for Texas local businesses.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#050c10" />
+      <stop offset="55%" stop-color="#071116" />
+      <stop offset="100%" stop-color="#0d1a21" />
+    </linearGradient>
+    <radialGradient id="glowLeft" cx="15%" cy="15%" r="45%">
+      <stop offset="0%" stop-color="#62f7d4" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="#62f7d4" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowRight" cx="88%" cy="12%" r="40%">
+      <stop offset="0%" stop-color="#5876ff" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#5876ff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#glowLeft)" />
+  <rect width="1200" height="630" fill="url(#glowRight)" />
+
+  <g transform="translate(100 88)">
+    <circle cx="24" cy="24" r="16" fill="#62f7d4" />
+    <text x="58" y="32" fill="#f4f7fa" font-family="Instrument Sans, Arial, sans-serif" font-size="28" font-weight="700">
+      Randy Urizar Production
+    </text>
+  </g>
+
+  <text
+    x="100"
+    y="230"
+    fill="#f4f7fa"
+    font-family="Sora, Arial, sans-serif"
+    font-size="72"
+    font-weight="700"
+  >
+    <tspan x="100" dy="0">Growth systems for</tspan>
+    <tspan x="100" dy="88">Texas local businesses.</tspan>
+  </text>
+
+  <text
+    x="100"
+    y="430"
+    fill="#a7b6c2"
+    font-family="Instrument Sans, Arial, sans-serif"
+    font-size="30"
+  >
+    <tspan x="100" dy="0">Clear websites. Better lead capture. Workflow-aware automation.</tspan>
+    <tspan x="100" dy="48">Guided implementation built around how the business actually works.</tspan>
+  </text>
+
+  <g transform="translate(100 536)">
+    <rect width="220" height="50" rx="25" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.1" />
+    <text x="110" y="31" fill="#f4f7fa" font-family="Instrument Sans, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle">
+      Workflow-first
+    </text>
+  </g>
+</svg>
