@@ -56,12 +56,14 @@
       id="metaTwitterImage"
       content="https://randyurizar.com/assets/images/og/randy-urizar-production-home.png"
     />
-    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
-    <link rel="shortcut icon" href="/assets/icons/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png?v=rn-20260529" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png?v=rn-20260529" />
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico?v=rn-20260529" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png?v=rn-20260529" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <script type="application/ld+json" id="structuredData"></script>
@@ -73,7 +75,11 @@
       <header class="site-header" id="siteHeader">
         <div class="container nav-wrap">
           <a class="brand-mark" href="#pageTop" aria-label="Go to top">
-            <span class="brand-dot"></span>
+            <img
+              src="/assets/icons/randy-urizar-logo.png"
+              alt="Randy Urizar logo"
+              class="brand-logo"
+            />
             <span id="brandName">Randy Urizar Production</span>
           </a>
 
@@ -116,6 +122,11 @@
                 <div class="panel-status">
                   <span class="status-pill" id="heroWorkflowPill">Workflow-first implementation</span>
                   <span class="status-copy" id="heroWorkflowStatus">Lead capture -> processing -> notification -> deployment</span>
+                </div>
+
+                <div class="hero-system-map" aria-label="Lead capture system flow">
+                  <div class="system-flow" id="heroSystemFlow"></div>
+                  <div class="system-metrics" id="heroSystemMetrics"></div>
                 </div>
 
                 <ol class="workflow-list" id="heroWorkflowList"></ol>
@@ -306,6 +317,56 @@
               </p>
             </div>
 
+            <div class="architecture-map glass-card" data-reveal>
+              <svg
+                viewBox="0 0 720 300"
+                role="img"
+                aria-labelledby="architectureMapTitle architectureMapDesc"
+                focusable="false"
+              >
+                <title id="architectureMapTitle">Content architecture map</title>
+                <desc id="architectureMapDesc">
+                  The homepage connects service pages, proof pages, educational resources, and local search pages into one reusable website system.
+                </desc>
+                <defs>
+                  <marker id="mapArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" />
+                  </marker>
+                </defs>
+                <g class="map-lines" fill="none" marker-end="url(#mapArrow)">
+                  <path d="M360 122 C360 72 210 78 180 112" />
+                  <path d="M430 150 C530 122 590 132 616 150" />
+                  <path d="M360 178 C360 224 210 220 180 188" />
+                  <path d="M292 150 C198 130 132 132 104 150" />
+                </g>
+                <g class="map-node map-node-center">
+                  <rect x="282" y="108" width="156" height="84" rx="18" />
+                  <text x="360" y="145" text-anchor="middle">Homepage</text>
+                  <text x="360" y="170" text-anchor="middle">System entry</text>
+                </g>
+                <g class="map-node">
+                  <rect x="66" y="120" width="128" height="60" rx="16" />
+                  <text x="130" y="145" text-anchor="middle">Services</text>
+                  <text x="130" y="166" text-anchor="middle">Offer paths</text>
+                </g>
+                <g class="map-node">
+                  <rect x="120" y="54" width="132" height="60" rx="16" />
+                  <text x="186" y="79" text-anchor="middle">Proof</text>
+                  <text x="186" y="100" text-anchor="middle">Case studies</text>
+                </g>
+                <g class="map-node">
+                  <rect x="120" y="186" width="132" height="60" rx="16" />
+                  <text x="186" y="211" text-anchor="middle">Education</text>
+                  <text x="186" y="232" text-anchor="middle">Resources</text>
+                </g>
+                <g class="map-node">
+                  <rect x="526" y="120" width="132" height="60" rx="16" />
+                  <text x="592" y="145" text-anchor="middle">Local Search</text>
+                  <text x="592" y="166" text-anchor="middle">Texas pages</text>
+                </g>
+              </svg>
+            </div>
+
             <div class="architecture-grid" id="architectureGrid"></div>
           </div>
         </section>
@@ -381,6 +442,20 @@
                 </p>
 
                 <div class="preview-metrics" id="fitMetrics" aria-label="System strengths"></div>
+
+                <figure class="proof-shot">
+                  <img
+                    src="/assets/images/og/randy-urizar-production-home.png"
+                    alt="Production homepage preview showing the Randy Urizar Production growth systems message"
+                    width="1200"
+                    height="630"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption class="visually-hidden">
+                    Existing production homepage screenshot used as proof of the current system direction.
+                  </figcaption>
+                </figure>
               </div>
             </div>
           </div>
@@ -422,6 +497,7 @@
                 <article class="testimonial-card" data-reveal>
                   <blockquote>"What stood out was the structure. The process felt calmer, and the website finally explained the business the way we talk about it in person."</blockquote>
                   <div class="testimonial-meta">
+                    <span class="testimonial-avatar" aria-hidden="true">JL</span>
                     <strong>Jordan Lee</strong>
                     <p>Home Service Owner</p>
                   </div>
@@ -430,6 +506,7 @@
                 <article class="testimonial-card" data-reveal>
                   <blockquote>"The biggest win was clarity. We stopped guessing how leads should move and finally had a system that matched how we actually work."</blockquote>
                   <div class="testimonial-meta">
+                    <span class="testimonial-avatar" aria-hidden="true">CP</span>
                     <strong>Cameron Price</strong>
                     <p>Local Business Operator</p>
                   </div>
@@ -667,7 +744,11 @@
           <div class="footer-grid">
             <section class="footer-brand-panel glass-card" data-reveal aria-labelledby="footerBrandHeading">
               <div class="footer-brand-mark">
-                <span class="brand-dot"></span>
+                <img
+                  src="/assets/icons/randy-urizar-logo.png"
+                  alt="Randy Urizar logo"
+                  class="brand-logo"
+                />
                 <div>
                   <h2 id="footerBrandHeading">Randy Urizar Production</h2>
                   <p class="footer-legal" id="footerLegalName">Urizar Group LLC</p>
@@ -687,32 +768,36 @@
               </div>
             </section>
 
-            <nav class="footer-column" data-reveal aria-labelledby="footerServicesHeading">
-              <h3 id="footerServicesHeading">Services</h3>
-              <ul class="footer-link-list" id="footerServicesList"></ul>
-            </nav>
+            <div class="footer-column-group footer-services-group">
+              <nav class="footer-column footer-services-column" data-reveal aria-labelledby="footerServicesHeading">
+                <h3 id="footerServicesHeading">Services</h3>
+                <ul class="footer-link-list" id="footerServicesList"></ul>
+              </nav>
 
-            <nav class="footer-column" data-reveal aria-labelledby="footerIndustriesHeading">
-              <h3 id="footerIndustriesHeading">Industries</h3>
-              <ul class="footer-link-list" id="footerIndustriesList"></ul>
-            </nav>
+              <nav class="footer-column footer-industries-column" data-reveal aria-labelledby="footerIndustriesHeading">
+                <h3 id="footerIndustriesHeading">Industries</h3>
+                <ul class="footer-link-list" id="footerIndustriesList"></ul>
+              </nav>
+            </div>
 
-            <nav class="footer-column" data-reveal aria-labelledby="footerAreasHeading">
-              <h3 id="footerAreasHeading">Areas Served</h3>
-              <p class="footer-column-copy" id="footerAreaLabel">Serving local businesses across Texas.</p>
-              <ul class="footer-link-list" id="footerAreasList"></ul>
-            </nav>
+            <div class="footer-column-group footer-areas-group">
+              <nav class="footer-column footer-areas-column" data-reveal aria-labelledby="footerAreasHeading">
+                <h3 id="footerAreasHeading">Areas Served</h3>
+                <p class="footer-column-copy" id="footerAreaLabel">Serving local businesses across Texas.</p>
+                <ul class="footer-link-list" id="footerAreasList"></ul>
+              </nav>
 
-            <section class="footer-column footer-human-panel glass-card" data-reveal aria-labelledby="footerTrustHeading">
-              <h3 id="footerTrustHeading">How we work</h3>
-              <p class="footer-column-copy" id="footerTrustDescription">
-                Every system starts with thoughtful questions, careful workflow review, and a step-by-step approach that improves what already works instead of replacing everything blindly.
-              </p>
-              <p class="footer-service-area">
-                <strong>Service area:</strong>
-                <span id="footerServiceArea">Texas only for now.</span>
-              </p>
-            </section>
+              <section class="footer-column footer-human-panel glass-card" data-reveal aria-labelledby="footerTrustHeading">
+                <h3 id="footerTrustHeading">How we work</h3>
+                <p class="footer-column-copy" id="footerTrustDescription">
+                  Every system starts with thoughtful questions, careful workflow review, and a step-by-step approach that improves what already works instead of replacing everything blindly.
+                </p>
+                <p class="footer-service-area">
+                  <strong>Service area:</strong>
+                  <span id="footerServiceArea">Texas only for now.</span>
+                </p>
+              </section>
+            </div>
           </div>
 
           <div class="footer-subgrid">

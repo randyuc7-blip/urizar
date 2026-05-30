@@ -48,6 +48,18 @@ window.siteConfig = {
     heading: "What the system is built to support",
     pill: "Workflow-first implementation",
     status: "Lead capture -> processing -> notification -> deployment",
+    flow: [
+      { label: "Visitor", detail: "Finds the business" },
+      { label: "Lead form", detail: "Captures the request" },
+      { label: "SMS alert", detail: "Notifies the owner" },
+      { label: "Follow-up", detail: "Guides the next step" },
+      { label: "Booked work", detail: "Turns interest into action" }
+    ],
+    metrics: [
+      { value: "24/7", label: "Lead capture" },
+      { value: "Fast", label: "Owner notification" },
+      { value: "Clear", label: "Follow-up path" }
+    ],
     items: [
       {
         number: "01",

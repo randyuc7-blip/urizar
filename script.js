@@ -254,6 +254,41 @@
 
   renderLinkRow("heroExploreLinks", config.heroExploreLinks);
 
+  const heroSystemFlow = byId("heroSystemFlow");
+  (config.heroWorkflow.flow || []).forEach((step, index) => {
+    const item = document.createElement("article");
+    item.className = "system-flow-item";
+    item.style.setProperty("--step-index", index);
+
+    const marker = document.createElement("span");
+    marker.className = "system-flow-marker";
+    marker.textContent = String(index + 1).padStart(2, "0");
+
+    const label = document.createElement("strong");
+    label.textContent = step.label;
+
+    const detail = document.createElement("span");
+    detail.textContent = step.detail;
+
+    item.append(marker, label, detail);
+    heroSystemFlow.appendChild(item);
+  });
+
+  const heroSystemMetrics = byId("heroSystemMetrics");
+  (config.heroWorkflow.metrics || []).forEach((metric) => {
+    const item = document.createElement("article");
+    item.className = "system-metric";
+
+    const value = document.createElement("strong");
+    value.textContent = metric.value;
+
+    const label = document.createElement("span");
+    label.textContent = metric.label;
+
+    item.append(value, label);
+    heroSystemMetrics.appendChild(item);
+  });
+
   const heroWorkflowList = byId("heroWorkflowList");
   config.heroWorkflow.items.forEach((itemConfig) => {
     const item = document.createElement("li");
