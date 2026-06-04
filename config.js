@@ -50,10 +50,11 @@ window.siteConfig = {
     status: "Lead capture -> processing -> notification -> deployment",
     flow: [
       { label: "Visitor", detail: "Finds the business" },
-      { label: "Lead form", detail: "Captures the request" },
-      { label: "SMS alert", detail: "Notifies the owner" },
-      { label: "Follow-up", detail: "Guides the next step" },
-      { label: "Booked work", detail: "Turns interest into action" }
+      { label: "Website", detail: "Explains the offer" },
+      { label: "Lead Form", detail: "Captures the request" },
+      { label: "SMS Alert", detail: "Notifies the owner" },
+      { label: "Follow-Up", detail: "Guides the next step" },
+      { label: "Booked Customer", detail: "Turns interest into action" }
     ],
     metrics: [
       { value: "24/7", label: "Lead capture" },
@@ -108,6 +109,12 @@ window.siteConfig = {
       headline: "A thoughtful partner for businesses adapting to modern systems.",
       description:
         "The goal is not to add more tools. The goal is to reduce confusion, improve trust, and build something the business can actually use."
+    },
+    proof: {
+      eyebrow: "Proof system",
+      headline: "A reusable place for real client work when approved assets are ready.",
+      description:
+        "The proof library is built to hold verified screenshots, workflow examples, case study previews, and before/after comparisons without inventing results."
     },
     faq: {
       eyebrow: "Common questions",
@@ -327,6 +334,33 @@ window.siteConfig = {
         body: "Step-by-step implementation instead of a handoff and guesswork"
       }
     ]
+  },
+  proof: {
+    emptyState: {
+      label: "Ready for verified proof",
+      title: "No client proof is published until the work, permission, and assets are real.",
+      body:
+        "This keeps the site professional now while making it easy to add approved client screenshots, workflow screenshots, case study previews, and before/after examples later."
+    },
+    assetTypes: [
+      {
+        title: "Client screenshots",
+        body: "Approved live-site or system screenshots with accurate alt text, client name, service type, and project context."
+      },
+      {
+        title: "Workflow screenshots",
+        body: "Screens from intake forms, notification flows, CRM stages, or handoff steps that show how leads move through the system."
+      },
+      {
+        title: "Case study previews",
+        body: "Short summaries that connect the business problem, system changes, and real outcome once a full case study is ready."
+      },
+      {
+        title: "Before/after examples",
+        body: "Side-by-side proof that compares the old experience with the improved structure, copy, or lead handling flow."
+      }
+    ],
+    items: []
   },
   faqExploreLinks: [
     { label: "Full FAQ hub", href: "/faq/" },

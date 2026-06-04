@@ -53,6 +53,12 @@
     trustEyebrow: config.sections.trust.eyebrow,
     trustHeadline: config.sections.trust.headline,
     trustDescription: config.sections.trust.description,
+    proofEyebrow: config.sections.proof.eyebrow,
+    proofHeadline: config.sections.proof.headline,
+    proofDescription: config.sections.proof.description,
+    proofEmptyLabel: config.proof.emptyState.label,
+    proofEmptyTitle: config.proof.emptyState.title,
+    proofEmptyBody: config.proof.emptyState.body,
     faqEyebrow: config.sections.faq.eyebrow,
     faqHeadline: config.sections.faq.headline,
     faqDescription: config.sections.faq.description,
@@ -229,6 +235,24 @@
       });
     }
 
+    const proofItems = (((config.proof || {}).items) || []).map((item, index) => ({
+      "@type": "CreativeWork",
+      position: index + 1,
+      name: item.title,
+      description: item.body || item.summary,
+      url: item.href ? absoluteUrl(item.href) : undefined,
+      image: item.image && item.image.src ? absoluteUrl(item.image.src) : undefined
+    }));
+
+    if (proofItems.length > 0) {
+      schemaGraph.push({
+        "@type": "ItemList",
+        "@id": `${canonicalUrl}#proof-library`,
+        name: "Client proof library",
+        itemListElement: proofItems
+      });
+    }
+
     structuredData.textContent = JSON.stringify(
       {
         "@context": "https://schema.org",
@@ -348,6 +372,8 @@
     `;
     fitMetrics.appendChild(article);
   });
+
+  renderProofLibrary();
 
   renderLinkRow("faqExploreLinks", config.faqExploreLinks);
 
@@ -555,6 +581,111 @@
       linkNode.textContent = link.label;
       container.appendChild(linkNode);
     });
+  }
+
+  function renderProofLibrary() {
+    const proofGrid = byId("proofGrid");
+    const proofConfig = config.proof || {};
+
+    if (!proofGrid) {
+      return;
+    }
+
+    const proofItems = Array.isArray(proofConfig.items) ? proofConfig.items.filter((item) => item && item.title) : [];
+    const readyItems = Array.isArray(proofConfig.assetTypes) ? proofConfig.assetTypes : [];
+    const itemsToRender = proofItems.length > 0 ? proofItems : readyItems;
+
+    proofGrid.setAttribute(
+      "aria-label",
+      proofItems.length > 0 ? "Verified client proof examples" : "Proof library architecture"
+    );
+
+    itemsToRender.forEach((item) => {
+      const article = document.createElement("article");
+      article.className = proofItems.length > 0 ? "proof-card proof-card-live" : "proof-card proof-card-ready";
+      article.setAttribute("data-reveal", "");
+
+      if (proofItems.length > 0) {
+        appendProofMedia(article, item);
+      }
+
+      const meta = document.createElement("div");
+      meta.className = "proof-card-meta";
+
+      if (item.label || item.type || item.service) {
+        const label = document.createElement("span");
+        label.className = "proof-type";
+        label.textContent = item.label || item.type || item.service;
+        meta.appendChild(label);
+      }
+
+      const title = document.createElement("h3");
+      title.textContent = item.title;
+
+      const body = document.createElement("p");
+      body.textContent = item.body || item.summary || "";
+
+      meta.append(title, body);
+
+      if (item.client || item.service) {
+        const details = document.createElement("p");
+        details.className = "proof-detail";
+        details.textContent = [item.client, item.service].filter(Boolean).join(" | ");
+        meta.appendChild(details);
+      }
+
+      if (item.href) {
+        const link = document.createElement("a");
+        link.className = "proof-link";
+        link.href = item.href;
+        link.textContent = item.linkLabel || "View case study";
+        meta.appendChild(link);
+      }
+
+      article.appendChild(meta);
+      proofGrid.appendChild(article);
+    });
+  }
+
+  function appendProofMedia(container, item) {
+    if (item.beforeImage && item.afterImage) {
+      const comparison = document.createElement("div");
+      comparison.className = "proof-comparison";
+
+      [item.beforeImage, item.afterImage].forEach((image, index) => {
+        const figure = document.createElement("figure");
+        figure.className = "proof-media";
+
+        const label = document.createElement("figcaption");
+        label.textContent = index === 0 ? item.beforeLabel || "Before" : item.afterLabel || "After";
+
+        const imageNode = document.createElement("img");
+        imageNode.src = image.src;
+        imageNode.alt = image.alt || "";
+        imageNode.loading = "lazy";
+        imageNode.decoding = "async";
+
+        figure.append(imageNode, label);
+        comparison.appendChild(figure);
+      });
+
+      container.appendChild(comparison);
+      return;
+    }
+
+    if (item.image && item.image.src) {
+      const figure = document.createElement("figure");
+      figure.className = "proof-media";
+
+      const imageNode = document.createElement("img");
+      imageNode.src = item.image.src;
+      imageNode.alt = item.image.alt || "";
+      imageNode.loading = "lazy";
+      imageNode.decoding = "async";
+
+      figure.appendChild(imageNode);
+      container.appendChild(figure);
+    }
   }
 
   function renderFooterChips(targetId, chips) {
