@@ -98,8 +98,8 @@
       <main id="mainContent" tabindex="-1">
         <section class="hero-section" aria-labelledby="heroHeadline">
           <div class="hero-backdrop" aria-hidden="true"></div>
-          <div class="container hero-grid">
-            <div class="hero-copy" data-reveal>
+          <div class="container hero-grid" data-reveal>
+            <div class="hero-copy">
               <p class="eyebrow" id="heroEyebrow">Guided growth systems for local businesses</p>
               <h1 id="heroHeadline">Tailor-made growth systems for local businesses.</h1>
               <p class="hero-subheadline" id="heroSubheadline">
@@ -116,21 +116,15 @@
               <ul class="hero-points" id="heroPoints" aria-label="Core benefits"></ul>
             </div>
 
-            <aside class="hero-panel" data-reveal aria-labelledby="heroWorkflowHeading">
-              <div class="hero-card glass-card">
-                <p class="mini-label" id="heroWorkflowHeading">What the system is built to support</p>
-                <div class="panel-status">
-                  <span class="status-pill" id="heroWorkflowPill">Workflow-first implementation</span>
-                  <span class="status-copy" id="heroWorkflowStatus">Lead capture -> processing -> notification -> deployment</span>
-                </div>
-
-                <div class="hero-system-map" aria-label="Lead capture system flow">
-                  <div class="system-flow" id="heroSystemFlow"></div>
-                  <div class="system-metrics" id="heroSystemMetrics"></div>
-                </div>
-
-                <ol class="workflow-list" id="heroWorkflowList"></ol>
-              </div>
+            <aside class="hero-panel" aria-label="Coming soon preview">
+              <figure class="hero-coming-soon glass-card">
+                <img
+                  src="/assets/images/coming-soon-growth-system.svg"
+                  alt="Coming soon preview for the next growth system visual"
+                  width="960"
+                  height="960"
+                />
+              </figure>
             </aside>
           </div>
         </section>
@@ -171,7 +165,7 @@
               </aside>
 
               <div class="services-grid" id="servicesGrid">
-                <article class="service-card" data-reveal aria-labelledby="websiteDesignTitle">
+                <article class="service-card service-card-motion" data-reveal aria-labelledby="websiteDesignTitle">
                   <div class="service-card-top">
                     <span class="service-kind">Foundation</span>
                     <a class="service-link" href="/services/#website-design">Open path</a>
