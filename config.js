@@ -44,41 +44,6 @@ window.siteConfig = {
     "Combines semantic website structure, lead capture, and workflow-aware automation",
     "Guided step by step so the system feels useful, calm, and tailored"
   ],
-  heroWorkflow: {
-    heading: "What the system is built to support",
-    pill: "Workflow-first implementation",
-    status: "Lead capture -> processing -> notification -> deployment",
-    flow: [
-      { label: "Visitor", detail: "Finds the business" },
-      { label: "Website", detail: "Explains the offer" },
-      { label: "Lead Form", detail: "Captures the request" },
-      { label: "SMS Alert", detail: "Notifies the owner" },
-      { label: "Follow-Up", detail: "Guides the next step" },
-      { label: "Booked Customer", detail: "Turns interest into action" }
-    ],
-    metrics: [
-      { value: "24/7", label: "Lead capture" },
-      { value: "Fast", label: "Owner notification" },
-      { value: "Clear", label: "Follow-up path" }
-    ],
-    items: [
-      {
-        number: "01",
-        title: "Clarify the offer",
-        body: "The homepage explains who you help, what you do, and why reaching out feels like a safe next step."
-      },
-      {
-        number: "02",
-        title: "Capture demand cleanly",
-        body: "Forms and contact paths stay simple so real buyers can reach out without friction."
-      },
-      {
-        number: "03",
-        title: "Guide the follow-up",
-        body: "Notifications and handoff steps are shaped around how your business already works."
-      }
-    ]
-  },
   sections: {
     services: {
       eyebrow: "Services",
