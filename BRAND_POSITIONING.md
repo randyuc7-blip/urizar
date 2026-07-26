@@ -36,7 +36,7 @@ It should communicate:
 - structure
 - clarity
 - trust
-- calm expertise
+- snappy expertise
 - intentional progress
 
 ## What The Business Is Not
@@ -86,7 +86,7 @@ Visitors should feel:
 - more in control
 
 The emotional promise is not speed alone.
-It is calm, guided progress with structure.
+It is snappy, guided progress with structure.
 
 ## Conversion Psychology
 
@@ -169,7 +169,7 @@ Do not rely on authority signals that feel inflated or corporate.
 Preferred authority style:
 
 - grounded
-- calm
+- snappy
 - observant
 - strategic
 - implementation-focused
@@ -179,7 +179,7 @@ Preferred authority style:
 The tone should be:
 
 - clear
-- calm
+- snappy
 - confident
 - warm
 - structured
@@ -291,7 +291,7 @@ Use trust signals that support the positioning:
 - workflow review
 - white-glove implementation
 - simple explanations
-- calm support
+- snappy support
 - practical deployment
 
 ## Messaging Guardrails
@@ -309,4 +309,4 @@ If new copy weakens those truths, revise it.
 
 Use this as a quick reference:
 
-This brand helps local businesses adapt to modern digital systems through tailored websites, workflow-aware automation, and calm step-by-step implementation. It should feel strategic, human, clear, and trustworthy rather than generic, corporate, or overly technical.
+This brand helps local businesses adapt to modern digital systems through tailored websites, workflow-aware automation, and snappy step-by-step implementation. It should feel strategic, human, clear, and trustworthy rather than generic, corporate, or overly technical.

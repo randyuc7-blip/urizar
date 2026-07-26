@@ -26,6 +26,21 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://randyurizar.com/case-studies/asencio-detailing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://randyurizar.com/case-studies/upart/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://randyurizar.com/case-studies/julias-meal-prep/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://randyurizar.com/industries/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

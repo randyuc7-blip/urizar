@@ -147,7 +147,7 @@ They should prove:
 - the workflow was understood
 - the system got clearer
 - follow-up improved
-- the business gained a calmer, more usable process
+- the business gained a snappy, more usable process
 
 Each case study should link to:
 

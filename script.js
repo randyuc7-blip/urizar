@@ -32,10 +32,8 @@
     heroCta: config.ctaLabel,
     servicesEyebrow: config.sections.services.eyebrow,
     servicesHeadline: config.sections.services.headline,
-    servicesDescription: config.sections.services.description,
     servicesSummaryLabel: config.servicesSummary.label,
     servicesSummaryHeadline: config.servicesSummary.headline,
-    servicesSummaryDescription: config.servicesSummary.description,
     architectureEyebrow: config.sections.architecture.eyebrow,
     architectureHeadline: config.sections.architecture.headline,
     architectureDescription: config.sections.architecture.description,
@@ -56,15 +54,11 @@
     proofEyebrow: config.sections.proof.eyebrow,
     proofHeadline: config.sections.proof.headline,
     proofDescription: config.sections.proof.description,
-    proofEmptyLabel: config.proof.emptyState.label,
-    proofEmptyTitle: config.proof.emptyState.title,
-    proofEmptyBody: config.proof.emptyState.body,
     faqEyebrow: config.sections.faq.eyebrow,
     faqHeadline: config.sections.faq.headline,
     faqDescription: config.sections.faq.description,
     ctaEyebrow: config.sections.cta.eyebrow,
     ctaHeadline: config.sections.cta.headline,
-    ctaDescription: config.sections.cta.description,
     ctaButton: config.ctaLabel,
     contactEyebrow: config.sections.contact.eyebrow,
     contactHeadline: config.sections.contact.headline,
@@ -280,8 +274,14 @@
     const article = document.createElement("article");
     article.className = "services-summary-item";
     article.innerHTML = `
-      <h3>${itemConfig.title}</h3>
-      <p>${itemConfig.body}</p>
+      <figure class="services-summary-visual">
+        <img src="${itemConfig.image}" alt="${itemConfig.imageAlt}" width="1254" height="1254" loading="lazy" decoding="async" />
+      </figure>
+      <div class="services-summary-copy">
+        <h3>${itemConfig.title}</h3>
+        <p class="services-summary-tagline">${itemConfig.tagline}</p>
+        <p>${itemConfig.body}</p>
+      </div>
     `;
     servicesSummaryList.appendChild(article);
   });
@@ -540,22 +540,14 @@
     }
 
     const proofItems = Array.isArray(proofConfig.items) ? proofConfig.items.filter((item) => item && item.title) : [];
-    const readyItems = Array.isArray(proofConfig.assetTypes) ? proofConfig.assetTypes : [];
-    const itemsToRender = proofItems.length > 0 ? proofItems : readyItems;
+    proofGrid.setAttribute("aria-label", "Client work");
 
-    proofGrid.setAttribute(
-      "aria-label",
-      proofItems.length > 0 ? "Verified client proof examples" : "Proof library architecture"
-    );
-
-    itemsToRender.forEach((item) => {
+    proofItems.forEach((item) => {
       const article = document.createElement("article");
-      article.className = proofItems.length > 0 ? "proof-card proof-card-live" : "proof-card proof-card-ready";
+      article.className = "proof-card proof-card-live";
       article.setAttribute("data-reveal", "");
 
-      if (proofItems.length > 0) {
-        appendProofMedia(article, item);
-      }
+      appendProofMedia(article, item);
 
       const meta = document.createElement("div");
       meta.className = "proof-card-meta";
