@@ -46,7 +46,7 @@ Not:
 
 The website should feel:
 
-- calm
+- snappy
 - intentional
 - structured
 - modern
@@ -85,7 +85,7 @@ Premium means:
 - content feels valuable but never crowded
 - the interface gives the user time to understand
 
-Premium is visible calm.
+Premium is visibly snappy.
 
 ## Emotional Visual Goals
 
@@ -138,7 +138,7 @@ If a section feels crowded, remove or reduce before shrinking spacing.
 ### 3. Strong hierarchy, soft delivery
 
 Hierarchy should be obvious.
-Delivery should still feel calm.
+Delivery should still feel snappy.
 
 That means:
 
@@ -175,7 +175,7 @@ That means:
 - stable layouts
 - readable contrast
 - predictable spacing
-- calm motion
+- snappy motion
 - clear next steps
 
 The site should never feel hurried, loud, or needy.
@@ -207,7 +207,7 @@ Avoid:
 
 ## Typography Philosophy
 
-Typography should feel calm, sharp, and supportive.
+Typography should feel snappy, sharp, and supportive.
 
 Headlines should:
 
@@ -322,7 +322,7 @@ If every idea becomes a card, the interface becomes visually monotone.
 
 ### Trust content
 
-Trust should be presented with calm evidence.
+Trust should be presented with snappy evidence.
 
 Prefer:
 
@@ -386,7 +386,7 @@ Motion should help the page feel alive, not busy.
 
 ## Interaction Philosophy
 
-Interaction should feel calm and obvious.
+Interaction should feel snappy and obvious.
 
 Buttons, links, forms, and hover states should:
 
@@ -482,7 +482,7 @@ When creating or updating sections, future Codex tasks should:
 - treat whitespace as a feature
 - shorten repeated supporting copy
 - keep cards purposeful
-- prefer calm clarity over novelty
+- prefer snappy clarity over novelty
 
 Before adding a new visual element, ask:
 
@@ -538,7 +538,7 @@ Use it to protect:
 
 Before shipping a visual change, ask:
 
-1. Is it calmer?
+1. Is it snappy?
 2. Is it clearer?
 3. Is it more spacious?
 4. Is the hierarchy stronger?

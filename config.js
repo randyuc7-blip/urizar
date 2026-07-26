@@ -11,8 +11,8 @@ window.siteConfig = {
     locale: "en_US",
     themeColor: "#071116",
     siteName: "Randy Urizar Production",
-    ogImage: "/assets/images/og/randy-urizar-production-home.png",
-    ogImageAlt: "Randy Urizar Production social preview for Texas local business growth systems"
+    ogImage: "/assets/images/og/randy-urizar-production-home-v2.png",
+    ogImageAlt: "Randy Urizar Production tailor-made growth systems social preview with a guided local business workflow"
   },
   heroEyebrow: "Guided growth systems for local businesses",
   headline: "Tailor-made growth systems for local businesses.",
@@ -42,14 +42,12 @@ window.siteConfig = {
   heroPoints: [
     "Built for local service businesses that need clearer lead handling and follow-up",
     "Combines semantic website structure, lead capture, and workflow-aware automation",
-    "Guided step by step so the system feels useful, calm, and tailored"
+    "Guided step by step so the system feels useful, snappy, and tailored"
   ],
   sections: {
     services: {
       eyebrow: "Services",
-      headline: "Clear website and automation services for local businesses.",
-      description:
-        "Each service solves a different part of the same problem: helping people understand your business, contact you easily, and get a faster response without adding more confusion."
+      headline: "Clear website and automation services for local businesses."
     },
     architecture: {
       eyebrow: "Explore the system",
@@ -76,22 +74,20 @@ window.siteConfig = {
         "The goal is not to add more tools. The goal is to reduce confusion, improve trust, and build something the business can actually use."
     },
     proof: {
-      eyebrow: "Proof system",
-      headline: "A reusable place for real client work when approved assets are ready.",
+      eyebrow: "Client work",
+      headline: "Growth systems shaped around three different local businesses.",
       description:
-        "The proof library is built to hold verified screenshots, workflow examples, case study previews, and before/after comparisons without inventing results."
+        "Each project starts with the business, the customer, and the local market—not a one-size-fits-all template."
     },
     faq: {
       eyebrow: "Common questions",
-      headline: "Straight answers about websites, lead capture, hosting, and delivery.",
+      headline: "Let’s put your questions at ease.",
       description:
         "These are the questions Texas local business owners usually ask before they invest in a website or lead system. The goal is to make the process feel clearer, less technical, and easier to trust."
     },
     cta: {
       eyebrow: "Next step",
-      headline: "Talk through the system your business actually needs.",
-      description:
-        "If lead handling, follow-up, or website clarity feels messy right now, we can map the clearest next step together."
+      headline: "Talk through the system your business actually needs."
     },
     contact: {
       eyebrow: "Request a strategy call",
@@ -104,20 +100,27 @@ window.siteConfig = {
   servicesSummary: {
     label: "How the services fit together",
     headline: "Start with the part that feels unclear now. Build the rest around it.",
-    description:
-      "Some businesses need a clearer website first. Others need better follow-up, cleaner lead tracking, or help deciding what to automate. The structure below keeps those differences easy to understand.",
     items: [
       {
         title: "Foundation services",
-        body: "Website Design and Lead Capture Systems help people understand your offer and reach out without friction."
+        tagline: "A clear place to land",
+        body: "Website Design and Lead Capture Systems help people understand your offer and reach out without friction.",
+        image: "/assets/images/service-foundation-v1.png",
+        imageAlt: "A clear local business website resting on a strong illuminated foundation"
       },
       {
         title: "Follow-up services",
-        body: "SMS Notification Systems and CRM Setup help owners respond faster and stay organized after an inquiry comes in."
+        tagline: "Keep the conversation moving",
+        body: "SMS Notification Systems and CRM Setup help owners respond faster and stay organized after an inquiry comes in.",
+        image: "/assets/images/service-follow-up-v1.png",
+        imageAlt: "A customer inquiry moving from a message to a phone notification and an organized contact record"
       },
       {
         title: "Guidance services",
-        body: "Automation Consulting and Tailor-made Business Systems help connect the moving parts when the business needs more than a single fix."
+        tagline: "Connect the whole system",
+        body: "Automation Consulting and Tailor-made Business Systems help connect the moving parts when the business needs more than a single fix.",
+        image: "/assets/images/service-guidance-v1.png",
+        imageAlt: "A human-guided compass connecting a website, messages, scheduling, and customer information"
       }
     ]
   },
@@ -203,7 +206,7 @@ window.siteConfig = {
       description:
         "This service helps you understand what is worth automating, what should stay human, and how to simplify the process before adding technology.",
       points: [
-        "Keeps recommendations practical, calm, and matched to your actual workflow",
+        "Keeps recommendations practical, snappy, and matched to your actual workflow",
         "Useful when you want strategy before committing to software or implementation"
       ],
       relatedLinks: [
@@ -301,31 +304,32 @@ window.siteConfig = {
     ]
   },
   proof: {
-    emptyState: {
-      label: "Ready for verified proof",
-      title: "No client proof is published until the work, permission, and assets are real.",
-      body:
-        "This keeps the site professional now while making it easy to add approved client screenshots, workflow screenshots, case study previews, and before/after examples later."
-    },
-    assetTypes: [
+    items: [
       {
-        title: "Client screenshots",
-        body: "Approved live-site or system screenshots with accurate alt text, client name, service type, and project context."
+        label: "Carrollton, Texas",
+        title: "Asencio Detailing",
+        body: "A clear local presence for a Carrollton car detailing business, built to explain the service and make the next step easy.",
+        service: "Car detailing",
+        href: "/case-studies/asencio-detailing/",
+        linkLabel: "View client project"
       },
       {
-        title: "Workflow screenshots",
-        body: "Screens from intake forms, notification flows, CRM stages, or handoff steps that show how leads move through the system."
+        label: "Dallas, Texas",
+        title: "UPArt",
+        body: "A focused product experience for custom golf club covers made in Dallas, with the craftsmanship and customization kept clear.",
+        service: "Custom golf club covers",
+        href: "/case-studies/upart/",
+        linkLabel: "View client project"
       },
       {
-        title: "Case study previews",
-        body: "Short summaries that connect the business problem, system changes, and real outcome once a full case study is ready."
-      },
-      {
-        title: "Before/after examples",
-        body: "Side-by-side proof that compares the old experience with the improved structure, copy, or lead handling flow."
+        label: "Farmers Branch, Texas",
+        title: "Julia's Meal Prep",
+        body: "A simple ordering path for healthy meal prep with pickup and delivery options in Farmers Branch.",
+        service: "Healthy meal prep",
+        href: "/case-studies/julias-meal-prep/",
+        linkLabel: "View client project"
       }
-    ],
-    items: []
+    ]
   },
   faqExploreLinks: [
     { label: "Full FAQ hub", href: "/faq/" },
@@ -336,7 +340,7 @@ window.siteConfig = {
     brandName: "Randy Urizar Production",
     legalName: "Urizar Group LLC",
     brandDescription:
-      "Tailor-made growth systems for local businesses. Built with thoughtful questions, calm guidance, and systems shaped around how your business already works.",
+      "Tailor-made growth systems for local businesses. Built with thoughtful questions, snappy guidance, and systems shaped around how your business already works.",
     contactEmail: "info@randyurizar.com",
     cta: {
       eyebrow: "Request Quote",
@@ -385,7 +389,7 @@ window.siteConfig = {
       "Remote-first"
     ],
     trustDescription:
-      "The process is simple and human. We ask thoughtful questions, learn the workflow behind your business, improve what already exists when it makes sense, and guide you step by step so the system feels useful now and scalable later.",
+      "We ask thoughtful questions, learn the workflow behind your business, improve what already exists when it makes sense, and guide you step by step so the system feels useful now and scalable later.",
     serviceAreaLabel: "Serving local businesses across Texas.",
     serviceArea: "Texas only for now.",
     exploreLinks: [
