@@ -248,11 +248,11 @@ window.siteConfig = {
     {
       title: "Industry pages",
       description:
-        "Industry pages organize workflow-specific language for contractors, restaurants, barbers, and other local service niches without muddying the homepage.",
+        "See how real client systems change across local services, custom products, and recurring food orders—then find the workflow pattern closest to your business.",
       links: [
-        { label: "Contractors", href: "/industries/#contractors" },
-        { label: "Restaurants", href: "/industries/#restaurants" },
-        { label: "Electricians", href: "/industries/#electricians" }
+        { label: "Local services", href: "/industries/#local-services" },
+        { label: "Custom products", href: "/industries/#custom-products" },
+        { label: "Food and meal orders", href: "/industries/#food-orders" }
       ]
     },
     {
@@ -359,14 +359,10 @@ window.siteConfig = {
       { label: "Tailor-made Business Systems", href: "/services/#tailor-made-business-systems" }
     ],
     industries: [
-      { label: "Contractors", href: "/industries/#contractors" },
-      { label: "Restaurants", href: "/industries/#restaurants" },
-      { label: "Barbers", href: "/industries/#barber-shops" },
-      { label: "Photobooths", href: "/industries/#photobooth-businesses" },
-      { label: "Card Shops", href: "/industries/#trading-card-stores" },
-      { label: "Bakeries", href: "/industries/#bakeries" },
-      { label: "Electricians", href: "/industries/#electricians" },
-      { label: "Plumbers", href: "/industries/#plumbers" }
+      { label: "Local Services", href: "/industries/#local-services" },
+      { label: "Custom Products", href: "/industries/#custom-products" },
+      { label: "Food & Meal Orders", href: "/industries/#food-orders" },
+      { label: "Workflow Fit", href: "/industries/#workflow-fit" }
     ],
     areas: [
       { label: "Dallas", href: "/texas/#dallas" },
