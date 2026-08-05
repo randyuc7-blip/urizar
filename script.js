@@ -27,7 +27,6 @@
     brandName: config.businessName,
     heroEyebrow: config.heroEyebrow,
     heroHeadline: config.headline,
-    heroSubheadline: config.subheadline,
     navCta: config.ctaLabel,
     heroCta: config.ctaLabel,
     servicesEyebrow: config.sections.services.eyebrow,
@@ -72,6 +71,13 @@
       node.textContent = value;
     }
   });
+
+  const servicesGrid = byId("servicesGrid");
+  const contactGrid = document.querySelector("#contact .contact-grid");
+
+  if (servicesGrid && contactGrid) {
+    contactGrid.appendChild(servicesGrid);
+  }
 
   if (config.accentColor) {
     root.style.setProperty("--accent", config.accentColor);
@@ -287,39 +293,45 @@
   });
 
   const architectureGrid = byId("architectureGrid");
-  (config.architectureCards || []).forEach((card) => {
-    const article = document.createElement("article");
-    article.className = "architecture-card";
-    article.setAttribute("data-reveal", "");
-    article.innerHTML = `
-      <h3>${card.title}</h3>
-      <p>${card.description}</p>
-      <div class="context-link-row architecture-links">
-        ${(card.links || [])
-          .map((link) => `<a class="context-link-chip" href="${link.href}">${link.label}</a>`)
-          .join("")}
-      </div>
-    `;
-    architectureGrid.appendChild(article);
-  });
+  if (architectureGrid) {
+    (config.architectureCards || []).forEach((card) => {
+      const article = document.createElement("article");
+      article.className = "architecture-card";
+      article.setAttribute("data-reveal", "");
+      article.innerHTML = `
+        <h3>${card.title}</h3>
+        <p>${card.description}</p>
+        <div class="context-link-row architecture-links">
+          ${(card.links || [])
+            .map((link) => `<a class="context-link-chip" href="${link.href}">${link.label}</a>`)
+            .join("")}
+        </div>
+      `;
+      architectureGrid.appendChild(article);
+    });
+  }
 
   const audienceList = byId("audienceList");
-  config.audience.list.forEach((itemText) => {
-    const item = document.createElement("li");
-    item.textContent = itemText;
-    audienceList.appendChild(item);
-  });
+  if (audienceList) {
+    config.audience.list.forEach((itemText) => {
+      const item = document.createElement("li");
+      item.textContent = itemText;
+      audienceList.appendChild(item);
+    });
+  }
 
   const fitMetrics = byId("fitMetrics");
-  config.audience.metrics.forEach((metric) => {
-    const article = document.createElement("article");
-    article.className = "metric-card";
-    article.innerHTML = `
-      <strong>${metric.title}</strong>
-      <span>${metric.body}</span>
-    `;
-    fitMetrics.appendChild(article);
-  });
+  if (fitMetrics) {
+    config.audience.metrics.forEach((metric) => {
+      const article = document.createElement("article");
+      article.className = "metric-card";
+      article.innerHTML = `
+        <strong>${metric.title}</strong>
+        <span>${metric.body}</span>
+      `;
+      fitMetrics.appendChild(article);
+    });
+  }
 
   renderProofLibrary();
 
@@ -527,6 +539,18 @@
       linkNode.className = "context-link-chip";
       linkNode.href = link.href;
       linkNode.textContent = link.label;
+
+      if (targetId === "heroExploreLinks") {
+        linkNode.insertAdjacentHTML(
+          "beforeend",
+          `<span class="cta-interaction-cue" aria-hidden="true">
+            <svg viewBox="0 0 32 32" focusable="false">
+              <path d="M16 24V9.5c0-1.2-1-2.2-2.2-2.2s-2.2 1-2.2 2.2v8.3l-1.3-1.4c-.9-.9-2.3-.9-3.2 0-.8.8-.9 2.1-.2 3l4.7 6.1c1.1 1.4 2.8 2.2 4.6 2.2h2.6c3.2 0 5.8-2.6 5.8-5.8v-5.1c0-1.2-1-2.2-2.2-2.2-.7 0-1.3.3-1.7.8-.2-1-1.1-1.8-2.2-1.8-.7 0-1.3.3-1.7.8"></path>
+            </svg>
+          </span>`
+        );
+      }
+
       container.appendChild(linkNode);
     });
   }
