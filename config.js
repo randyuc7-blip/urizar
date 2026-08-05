@@ -16,8 +16,6 @@ window.siteConfig = {
   },
   heroEyebrow: "Guided growth systems for local businesses",
   headline: "Tailor-made growth systems for local businesses.",
-  subheadline:
-    "We help Texas service businesses turn scattered websites, slow follow-up, and manual admin into a clearer system for lead capture, client communication, and modern search visibility.",
   accentColor: "#62f7d4",
   previewBackgroundColor: "#0d1a21",
   email: "info@randyurizar.com",
@@ -51,9 +49,9 @@ window.siteConfig = {
     },
     architecture: {
       eyebrow: "Explore the system",
-      headline: "A clearer content structure for services, proof, education, and local search.",
+      headline: "Find the right path for your business, your location, and the problem you need to solve.",
       description:
-        "These paths help the homepage support future service pages, industry pages, resource content, downloadable guides, and proof pages without turning the site into a mess."
+        "Explore local business services, industry-specific systems, Texas service areas, and practical resources designed to answer real questions and make the next step clear."
     },
     steps: {
       eyebrow: "How we guide the process",
@@ -236,9 +234,9 @@ window.siteConfig = {
   ],
   architectureCards: [
     {
-      title: "Service hub",
+      title: "Local business services",
       description:
-        "A central page for service intent. Each core offer gets its own anchor section now, with room to become its own page later.",
+        "Start with the problem you want to solve—from a clearer website and better lead capture to faster follow-up and a more organized business system.",
       links: [
         { label: "Website Design", href: "/services/#website-design" },
         { label: "Lead Capture Systems", href: "/services/#lead-capture-systems" },
@@ -246,7 +244,7 @@ window.siteConfig = {
       ]
     },
     {
-      title: "Industry pages",
+      title: "Systems shaped around your industry",
       description:
         "See how real client systems change across local services, custom products, and recurring food orders—then find the workflow pattern closest to your business.",
       links: [
@@ -256,9 +254,9 @@ window.siteConfig = {
       ]
     },
     {
-      title: "Texas local pages",
+      title: "Local support across Texas",
       description:
-        "Location pages give the site a clear place to grow city-based intent while keeping service, industry, and area relationships easy to understand.",
+        "See how tailored website, lead capture, and automation support can serve local businesses in Dallas, Plano, Frisco, and nearby Texas communities.",
       links: [
         { label: "Dallas", href: "/texas/#dallas" },
         { label: "Plano", href: "/texas/#plano" },
@@ -266,9 +264,9 @@ window.siteConfig = {
       ]
     },
     {
-      title: "Resource library",
+      title: "Practical business resources",
       description:
-        "The resource hub is where FAQs, guides, templates, lead magnets, and educational content can grow into topical authority over time.",
+        "Use straightforward FAQs, guides, templates, and tools to understand your options before deciding what your business needs next.",
       links: [
         { label: "FAQ hub", href: "/faq/" },
         { label: "Downloadable guides", href: "/resources/#downloadable-guides" },
