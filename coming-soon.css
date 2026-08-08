@@ -89,55 +89,17 @@ a {
   height: 32rem;
 }
 
-.site-header,
 .hero,
 footer {
   width: min(100%, 1180px);
   margin-inline: auto;
 }
 
-.site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 6.5rem;
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-}
-
-.brand img {
-  width: 3rem;
-  object-fit: contain;
-}
-
-.header-contact {
-  padding: 0.7rem 1rem;
-  color: var(--muted);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  font-weight: 600;
-  transition: color 180ms ease, border-color 180ms ease, transform 180ms ease;
-}
-
-.header-contact:hover,
-.header-contact:focus-visible {
-  color: var(--text);
-  border-color: rgba(98, 247, 212, 0.45);
-  transform: translateY(-2px);
-}
-
 .hero {
   display: grid;
   align-items: center;
   gap: clamp(3rem, 7vw, 7rem);
-  min-height: calc(100vh - 13rem);
+  min-height: calc(100vh - 4.5rem);
   padding: clamp(3.5rem, 8vw, 7rem) 0;
 }
 
@@ -274,26 +236,84 @@ h1 {
   position: relative;
   width: min(100%, 33rem);
   justify-self: center;
-  padding: 1rem;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025));
-  border: 1px solid var(--border);
-  border-radius: 2rem;
-  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.38);
-  backdrop-filter: blur(16px);
+  padding: clamp(0.5rem, 2vw, 1.25rem);
+  perspective: 1000px;
 }
 
 .system-preview::before {
   content: "";
   position: absolute;
-  inset: 12% -7%;
+  inset: 14% 8%;
   z-index: -1;
-  background: rgba(98, 247, 212, 0.11);
-  filter: blur(4rem);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(126, 151, 255, 0.2), rgba(98, 247, 212, 0.08) 44%, transparent 72%);
+  filter: blur(3.5rem);
 }
 
-.system-preview img {
+.metallic-logo-spin {
+  position: relative;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  animation: metallicLogoSpin 18s linear infinite;
+  will-change: transform;
+}
+
+.metallic-logo-spin::before,
+.metallic-logo-spin::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/assets/images/randy-urizar-3d-metal-logo-transparent-v2.png") center / contain no-repeat;
+  pointer-events: none;
+}
+
+.metallic-logo-spin::before {
+  filter: brightness(0.42);
+  transform: translateZ(-7px);
+}
+
+.metallic-logo-spin::after {
+  filter: brightness(0.7);
+  transform: translateZ(0);
+}
+
+.metallic-logo-spin img {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  border-radius: 1.4rem;
+  filter: drop-shadow(0 2rem 3rem rgba(0, 0, 0, 0.42));
+  transform: translateZ(7px);
+}
+
+@keyframes metallicLogoSpin {
+  0% {
+    transform: rotateY(0deg) scaleX(1);
+  }
+
+  24.99% {
+    transform: rotateY(89.99deg) scaleX(1);
+  }
+
+  25% {
+    transform: rotateY(90deg) scaleX(-1);
+  }
+
+  50% {
+    transform: rotateY(180deg) scaleX(-1);
+  }
+
+  74.99% {
+    transform: rotateY(269.99deg) scaleX(-1);
+  }
+
+  75% {
+    transform: rotateY(270deg) scaleX(1);
+  }
+
+  100% {
+    transform: rotateY(360deg) scaleX(1);
+  }
 }
 
 .preview-label,
@@ -350,12 +370,59 @@ footer p {
 }
 
 @media (max-width: 600px) {
-  .brand span {
-    max-width: 10rem;
+  .coming-soon {
+    padding-inline: clamp(1rem, 5vw, 1.5rem);
   }
 
-  .header-contact {
+  .hero {
+    gap: 2.25rem;
+    min-height: auto;
+    padding: 1.5rem 0 3rem;
+  }
+
+  .system-preview {
+    order: -1;
+    width: min(82vw, 20rem);
+    padding: 0;
+  }
+
+  .preview-label {
     display: none;
+  }
+
+  .preview-status {
+    right: 0;
+    bottom: 0.75rem;
+  }
+
+  .eyebrow {
+    align-items: flex-start;
+    gap: 0.55rem;
+    margin-bottom: 1rem;
+    font-size: 0.68rem;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+  }
+
+  .eyebrow span {
+    flex: 0 0 auto;
+    margin-top: 0.25rem;
+  }
+
+  h1 {
+    max-width: 11ch;
+    font-size: clamp(2.35rem, 10.5vw, 2.8rem);
+    line-height: 1.02;
+    letter-spacing: -0.055em;
+  }
+
+  .interest-form {
+    margin-top: 1.75rem;
+  }
+
+  .interest-form > label {
+    margin-bottom: 0.65rem;
+    line-height: 1.45;
   }
 
   .form-row {
@@ -367,18 +434,29 @@ footer p {
 
   .form-row input {
     min-height: 3rem;
+    padding-inline: 0.75rem;
   }
 
-  .preview-label {
-    left: 1.5rem;
+  .form-row button {
+    min-height: 3.5rem;
   }
 
-  .preview-status {
-    right: 1.5rem;
+  .form-note {
+    margin: 0.7rem 0 0;
+    line-height: 1.5;
+  }
+
+  .outcomes {
+    display: grid;
+    gap: 0.65rem;
+    margin-top: 1.5rem;
   }
 
   footer {
     flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem 0 1.75rem;
+    line-height: 1.5;
   }
 }
 
@@ -386,6 +464,7 @@ footer p {
   *,
   *::before,
   *::after {
+    animation: none !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
